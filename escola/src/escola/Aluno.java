@@ -15,7 +15,7 @@ public class Aluno {
 	}
 
 	public void cadastrarNome(Scanner scanner) {
-		System.out.println("Digite o NOME do aluno:");
+		System.out.println("Digite o Nome do aluno:");
 		this.nome = scanner.nextLine();
 		scanner.nextLine();
 		
