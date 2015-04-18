@@ -68,9 +68,9 @@ public class Escola {
 				break;
 			case OPCAO_EXIBIR_SITUACAO:
 				if (mediaNotas >= 6) {
-					System.out.println("Aluno Aprovado, " + nomeAluno);
+					System.out.println("Aluno: Aprovado, " + nomeAluno);
 				} else {
-					System.out.println("Aluno Reprovado, " + nomeAluno);
+					System.out.println("Aluno: Reprovado, " + nomeAluno);
 				}
 				break;
 			case OPCAO_SAIR:
