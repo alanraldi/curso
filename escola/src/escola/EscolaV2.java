@@ -48,22 +48,23 @@ public class EscolaV2 {
 				aluno.cadastrarNotas(scanner);
 				break;
 			case OPCAO_EXIBIR_MEDIA:
-				mediaNotas = aluno.somaNotas / aluno.QTD_NOTAS;
+				mediaNotas = aluno.calcularMedia();
 				System.out.println("Media: " + mediaNotas);
 				scanner.nextLine();
 				break;
 			case OPCAO_EXIBIR_HISTORICO:
-				for (int i = 0; i < aluno.notas.length; i++) {
+				double notas[] = aluno.getNotas();
+				for (int i = 0; i < notas.length; i++) {
 					System.out.println("nota " + (i + 1) + ": "
-							+ aluno.notas[i]);
+							+ notas[i]);
 				}
-
+				scanner.nextLine();
 				break;
 			case OPCAO_EXIBIR_SITUACAO:
 				if (mediaNotas >= 6) {
-					System.out.println("Aprovado, " + aluno.nome);
+					System.out.println("Aprovado, " + aluno.getNome());
 				} else {
-					System.out.println("Reprovado, " + aluno.nome);
+					System.out.println("Reprovado, " + aluno.getNome());
 				}
 				break;
 			case OPCAO_SAIR:
